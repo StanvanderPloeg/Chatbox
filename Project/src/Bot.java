@@ -1,12 +1,22 @@
+
+
+import com.rivescript.RiveScript;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Update;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
-import com.rivescript.RiveScript;
+
 
 
 public class Bot extends TelegramLongPollingBot
 {
+    RiveScript bot = new RiveScript();
+
+    public void SuperSwagMovieBot() {
+
+        bot.loadDirectory("resources/rivescript");
+        bot.sortReplies();
+    }
 
     @Override
     public void onUpdateReceived(Update update)
